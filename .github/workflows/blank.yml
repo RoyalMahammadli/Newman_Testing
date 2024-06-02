@@ -19,7 +19,7 @@ jobs:
         run: |
           newman run github_actions_example.postman_collection.json -e git_action_test.postman_environment.json -r cli,htmlextra
       - name: Upload HTML report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: test-reports
           path: newman/*.html   # Update the path to the directory where your report is generated
