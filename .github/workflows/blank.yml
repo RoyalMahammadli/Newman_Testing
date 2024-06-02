@@ -12,6 +12,9 @@ jobs:
       - name: Install Newman
         run: |
           npm install -g newman
+      - name: Install HTMLextra
+        run: |
+          npm i newman-reporter-htmlextra
       - name: Run API tests
         run: |
-          newman run github_actions_example.postman_collection.json -e git_action_test.postman_environment.json
+          newman run github_actions_example.postman_collection.json -e git_action_test.postman_environment.json -r htmlextra,cli
