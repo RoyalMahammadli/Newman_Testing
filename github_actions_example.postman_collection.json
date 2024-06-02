@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "55245720-2570-4466-add5-2db0c4966c09",
+		"name": "github_actions_example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31854063"
+	},
+	"item": [
+		{
+			"name": "getThis",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"test status code\",()=>{\r",
+							"    pm.expect(pm.response.code).to.be.eql(200)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{baseurl}}/",
+					"protocol": "https",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "sleep-and-smile.ru"
+		}
+	]
+}
