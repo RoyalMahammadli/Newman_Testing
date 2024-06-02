@@ -22,4 +22,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: test-reports
-          path: newman/Reports/*.html   # Update the path to the directory where your report is generated
+          path: newman/*.html   # Update the path to the directory where your report is generated
